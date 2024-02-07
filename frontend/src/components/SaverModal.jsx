@@ -12,6 +12,9 @@ function SaverModal({ generatedPass }) {
   const [isLoggedIn, setIsLoggedIn] = useState(token ? true : false);
   const savePassword = async () => {
     try {
+      if(!label){
+        return toast.error("Fill the label to save!")
+      }
       await api.post("/user/password/save", {
         content: { label, pass: generatedPass },
       });

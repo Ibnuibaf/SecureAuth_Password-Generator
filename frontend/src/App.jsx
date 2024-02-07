@@ -9,6 +9,7 @@ function App() {
   return (
     <GoogleOAuthProvider clientId="596357550935-jhld1mlmi7hjda08ret8ju85lt7rftnm.apps.googleusercontent.com">
       <BrowserRouter>
+      
         <div className="overflow-hidden">
           <Routes>
             <Route path="/" element={<LandingPage/>}/>
